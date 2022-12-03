@@ -1,0 +1,32 @@
+.container{
+  margin: 20px auto;
+  width: 90%;
+  height: 90vh;
+  background: #fdf7f7;
+  border: 2px solid #b5c9c9;
+  border-radius: 40px;
+  font-family: Montserrat;
+
+  header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #b5c9c9;
+    display: flex;
+    align-items: center;
+
+     .add-title{
+       margin: 0 20px 0 20px;
+     }
+
+    button{
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      background: rgba(253, 193, 212, 0.99);
+      color: #fdf7f7;
+      cursor: pointer;
+    }
+  }
+}
