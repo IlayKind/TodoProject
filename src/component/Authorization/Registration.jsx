@@ -1,8 +1,16 @@
 import React from 'react';
 import './Authorization.scss'
 import {NavLink} from "react-router-dom";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {useDispatch, useSelector} from "react-redux";
+import {setUser} from "../../store/AuthorizationUserSlice";
+import { useNavigate } from "react-router-dom";
+import {userSelector} from "../../store/Selector";
 
 const Registration = () => {
+  const {name} = useSelector(userSelector)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [value, setValue] = React.useState({
     name: '',
     lastName: '',
@@ -10,6 +18,21 @@ const Registration = () => {
     password: ''
   });
 
+  const createUser = (lastName, name, email, password) => {
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, lastName, name, email, password)
+      .then(({user}) => {
+        console.log(user)
+        dispatch(setUser({
+          email: user.email,
+          token: user.accessToken,
+          id: user.uid
+        }));
+        navigate('/')
+      })
+    .catch(console.error)
+  }
+  console.log(name)
   const onChange = (e) => {
     const newValue = {...value}
     newValue[e.target.id] = e.target.value
@@ -46,7 +69,7 @@ const Registration = () => {
         placeholder='Password'
         onChange={(e) => onChange(e)}
       />
-      <button>
+      <button onClick={() => createUser(value.email, value.password)}>
         Registration
       </button>
       <NavLink to='/' className='cansel__authorization'>

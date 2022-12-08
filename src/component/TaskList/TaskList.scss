@@ -1,32 +1,119 @@
 .container{
-  margin: 20px auto;
-  width: 90%;
-  height: 90vh;
-  background: #fdf7f7;
-  border: 2px solid #b5c9c9;
-  border-radius: 40px;
+  width: 100%;
+  height: 100vh;
+  background: #f3f3f3;
   font-family: Montserrat;
+  display: flex;
 
-  header{
+  .sidebar{
+    height: 100vh;
+    width: 220px;
+    background: #2d2d2d;
+    border-right: 2px solid #839696;
+  }
+
+  .content__task{
     width: 100%;
-    height: 80px;
-    border-bottom: 1px solid #b5c9c9;
-    display: flex;
-    align-items: center;
+    position: relative;
 
-     .add-title{
-       margin: 0 20px 0 20px;
-     }
+    .header-navigate{
+      height: 80px;
+      box-shadow: 0px 2px 4px #b4b4b4;
+      display: flex;
+      align-items: center;
 
-    button{
-      width: 40px;
-      height: 40px;
-      border: none;
-      border-radius: 50%;
-      font-size: 20px;
-      background: rgba(253, 193, 212, 0.99);
-      color: #fdf7f7;
-      cursor: pointer;
+      .profile-container{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+
+        .icon__profile{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #1e5964;
+          color: #48b3c7;
+          font-family: Montserrat;
+          font-weight: 600;
+          font-size: 22px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          position: relative;
+        }
+
+        .window-profile{
+          width: 180px;
+          height: 140px;
+          background: rgba(37, 45, 45, 0.99);
+          border: 1px solid rgba(197, 195, 195, 0.53);
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 9px;
+          top: 46px;
+
+
+          .user-profile{
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            color: rgba(255, 255, 255, 0.49);
+            margin: 10px 0 20px 5px;
+          }
+
+          .exit-profile{
+            margin: 0 0 0 5px;
+            width: 120px;
+            background: #839696;
+            border-radius: 5px;
+            border: 1px solid #839696;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .add__task{
+        margin: 0 0 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 213px;
+        height: 50px;
+        background: #294c54;
+        border-radius: 25px;
+
+        .add-title{
+          margin: 0 20px 0 20px;
+          font-family: Montserrat;
+          font-weight: 600;
+          font-size: 25px;
+          color: #48b3c7;
+
+        }
+
+        .add-btn{
+          width: 35px;
+          height: 35px;
+          border: none;
+          border-radius: 50%;
+          font-size: 20px;
+          background: #48b3c7;
+          color: #294c54;
+          cursor: pointer;
+          margin:  0 0 0 5px;
+        }
+      }
     }
   }
+
+
 }

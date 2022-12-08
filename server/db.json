@@ -1,0 +1,52 @@
+{
+  "newTask": [],
+  "scheduled": [
+    {
+      "id": 0,
+      "body": "Забрать Виолету из сада",
+      "description": "На обратно пути зайти к бабуле",
+      "dataNext": "01-01-2001",
+      "timer": "0:00:00",
+      "dataEnd": "01-02-2001",
+      "status": "scheduled",
+      "completed": false,
+      "option": false
+    }
+  ],
+  "inProgress": [
+    {
+      "id": 0,
+      "body": "Постирать вещи",
+      "description": "Развешать их",
+      "dataNext": "01-01-2001",
+      "timer": "0:00:00",
+      "dataEnd": "01-02-2001",
+      "status": "inProgress",
+      "completed": false,
+      "option": false
+    }
+  ],
+  "completed": [
+    {
+      "id": 0,
+      "body": "Закрыть задачу",
+      "description": "много чего сделать утром",
+      "dataNext": "01-01-2001",
+      "timer": "0:00:00",
+      "dataEnd": "01-02-2001",
+      "status": "completed",
+      "completed": true,
+      "option": false
+    },
+    {
+      "id": 1,
+      "body": "Магазин",
+      "description": "Купить хлеб, муку, мусорные пакеты, макароны",
+      "dataEnd": "2022-12-09",
+      "dataNext": "2022-12-08",
+      "status": "completed",
+      "option": false,
+      "completed": true
+    }
+  ]
+}

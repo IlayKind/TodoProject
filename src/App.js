@@ -4,6 +4,7 @@ import {Route, Routes} from "react-router-dom";
 import './App.scss'
 import Registration from "./component/Authorization/Registration";
 import AuthorizationForm from "./component/Authorization/AuthorizationForm";
+import './firebase'
 
 
 function App() {

@@ -1,6 +1,6 @@
+//___________TaskSlice________________
 
-
-export const taskSelector = (state) => state.TaskSlice.Task;
+export const taskSelector = (state) => state.TaskSlice;
 
 //_________UserSlice__________________
 

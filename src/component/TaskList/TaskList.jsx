@@ -1,20 +1,20 @@
 import React from 'react';
-import AddInputTask from "../InputAdd/AddInputTask";
-import Task from "../Task/Task";
-import './TaskList.scss'
+import AddInputTask from "./InputAdd/AddInputTask";
+import './TaskList.scss';
+import Sidebar from "./SideBar/Sidebar";
+import HeaderNavigate from "./Header/HeaderNavigate";
+import TaskSection from "./Task/Section/TaskSection";
 
 const TaskList = () => {
   const [addModalForm, setAddModalForm] = React.useState(false);
   return (
     <div className='container'>
-          <header>
-            <h1 className='add-title'>Add Task</h1>
-            <button onClick={() => setAddModalForm(true)} className='add-btn'>
-              +
-            </button>
-          </header>
-      <AddInputTask active={addModalForm} setActive={setAddModalForm}/>
-      <Task/>
+      <Sidebar/>
+      <div className='content__task'>
+        <HeaderNavigate setAddModalForm={setAddModalForm}/>
+        <AddInputTask active={addModalForm} setActive={setAddModalForm}/>
+        <TaskSection/>
+      </div>
     </div>
   );
 };
