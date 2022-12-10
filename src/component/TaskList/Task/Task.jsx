@@ -2,14 +2,16 @@ import React, {useEffect, useState} from 'react';
 import "./Task.scss"
 import OptionTask from "./OptionTask";
 import EditModal from "./EditTask/EditModal";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {optionActive} from "../../../store/TaskSlice";
 import { getPost } from "../../../store/asyncRequest/AsyncCreated";
+import {taskSelector} from "../../../store/Selector";
 
 
 const Task = ({activeTask}) => {
       const dispatch = useDispatch();
       const [edit, setEdit] = useState(false);
+      const {newTask, scheduled, inProgress, completed} = useSelector(taskSelector)
 
       useEffect(() => {
         dispatch(getPost())
@@ -18,6 +20,8 @@ const Task = ({activeTask}) => {
       const activeOptions = (item) => {
         dispatch(optionActive(item))
       }
+  console.log(scheduled)
+  console.log(completed)
   return (
     <>
       {

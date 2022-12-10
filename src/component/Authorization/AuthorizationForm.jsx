@@ -1,9 +1,10 @@
 import React from 'react';
 import './Authorization.scss'
 import {NavLink, useNavigate} from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {useDispatch} from "react-redux";
 import {setUser} from "../../store/AuthorizationUserSlice";
+import InputField from "../InputField";
 
 
 const AuthorizationForm = () => {
@@ -13,8 +14,6 @@ const AuthorizationForm = () => {
     email: '',
     password: ''
   });
-  
-
 
   const handleLogin = (email, password) => {
     const auth = getAuth();
@@ -31,31 +30,26 @@ const AuthorizationForm = () => {
       .catch(console.error)
   }
 
-
-  const onChange = (e) => {
-    const newValue = {...value}
-    newValue[e.target.id] = e.target.value
-    setValue(newValue)
-  }
-
   return (
     <div className='authorization__list'>
       <h3 className='authorization__title'>Войдите в аккаунт</h3>
-      <input
+      <InputField
+        obj={value}
         className='authorization__name'
         id='email'
         type='text'
         placeholder='login'
         value={value.email}
-        onChange={(e) => onChange(e)}
+        setValue={setValue}
       />
-      <input
+      <InputField
+        obj={value}
         className='authorization__password'
         id='password'
-        type='text'
+        type='password'
         placeholder='password'
         value={value.password}
-        onChange={(e) => onChange(e)}
+        setValue={setValue}
       />
       <button onClick={() => handleLogin(value.email, value.password)} className='authorization__btn'>
         Войти

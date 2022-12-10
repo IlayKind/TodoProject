@@ -1,52 +1,58 @@
 {
-  "newTask": [],
+  "newTask": [
+    {
+      "id": "Rb5jDF0mKmvEzfoJj0AeM",
+      "body": "fddgfавпytu5445",
+      "description": "vcvcvfвапgj",
+      "dataEnd": "2022-12-11",
+      "dataNext": "2022-12-10",
+      "status": "newTask"
+    },
+    {
+      "id": "donoFtAQljTkUxP159Plx",
+      "body": "fddgf",
+      "description": "h",
+      "dataNext": "2022-12-11",
+      "timer": "0:00:00",
+      "dataEnd": "2022-12-16",
+      "status": "newTask",
+      "completed": false,
+      "option": false
+    }
+  ],
   "scheduled": [
     {
-      "id": 0,
-      "body": "Забрать Виолету из сада",
-      "description": "На обратно пути зайти к бабуле",
-      "dataNext": "01-01-2001",
-      "timer": "0:00:00",
-      "dataEnd": "01-02-2001",
-      "status": "scheduled",
-      "completed": false,
-      "option": false
+      "id": "De0BXxFdFE5jhqVLXsO1I",
+      "body": "fdgdgfgfdhdyt45",
+      "description": "fbvcvcc 7646",
+      "dataEnd": "2022-12-11",
+      "dataNext": "2022-12-10",
+      "status": "scheduled"
     }
   ],
-  "inProgress": [
-    {
-      "id": 0,
-      "body": "Постирать вещи",
-      "description": "Развешать их",
-      "dataNext": "01-01-2001",
-      "timer": "0:00:00",
-      "dataEnd": "01-02-2001",
-      "status": "inProgress",
-      "completed": false,
-      "option": false
-    }
-  ],
+  "inProgress": [],
   "completed": [
     {
-      "id": 0,
-      "body": "Закрыть задачу",
-      "description": "много чего сделать утром",
-      "dataNext": "01-01-2001",
+      "id": "Ww4FPAviQktiR4LVOYpE0",
+      "body": "gf",
+      "description": "h",
+      "dataNext": "2022-12-09",
       "timer": "0:00:00",
-      "dataEnd": "01-02-2001",
+      "dataEnd": "2022-12-10",
       "status": "completed",
       "completed": true,
       "option": false
     },
     {
-      "id": 1,
-      "body": "Магазин",
-      "description": "Купить хлеб, муку, мусорные пакеты, макароны",
-      "dataEnd": "2022-12-09",
-      "dataNext": "2022-12-08",
+      "id": "1bhwqePoy6ESY9ZjQ157q",
+      "body": "fddgf",
+      "description": "vcvcvf",
+      "dataNext": "2022-12-09",
+      "timer": "0:00:00",
+      "dataEnd": "2022-12-10",
       "status": "completed",
-      "option": false,
-      "completed": true
+      "completed": true,
+      "option": false
     }
   ]
 }

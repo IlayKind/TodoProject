@@ -1,5 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {getPost} from "./asyncRequest/AsyncCreated";
+import {nanoid} from "nanoid";
 
 
 
@@ -59,7 +60,7 @@ export const TaskSlice = createSlice({
     checkTask: (state, action) => {
       const obj = {...action.payload}
       obj.completed = true;
-      obj.id = state.completed.length;
+      obj.id = nanoid();
       obj.status = "completed";
       obj.option = false;
       state.completed.push(obj);

@@ -19,7 +19,7 @@ export const getPost = createAsyncThunk('task/getPost', async (_, {rejectWithVal
 export const publicationPost = createAsyncThunk("task/publicationPost", async (action) => {
   if(action.status === "newTask"){
     await axios.post(newTask,action)
-  }else if(action.status === "schedule"){
+  }else if(action.status === "scheduled"){
     await axios.post(scheduled,action)
   }else{
     await axios.post(completed,action)
@@ -27,10 +27,9 @@ export const publicationPost = createAsyncThunk("task/publicationPost", async (a
 });
 
 export const deletePost = createAsyncThunk("task/deletePost", async (action) => {
-    console.log(`${newTask}/id_like=${action.id}`)
   if(action.status === "newTask"){
     await axios.delete(`${newTask}/${action.id}`)
-  }else if(action.status === "schedule"){
+  }else if(action.status === "scheduled"){
     await axios.delete(`${scheduled}/${action.id}`)
   }else if(action.status === "inProgress"){
     await axios.delete(`${inProgress}/${action.id}`)
@@ -42,7 +41,7 @@ export const deletePost = createAsyncThunk("task/deletePost", async (action) => 
 export const editPost = createAsyncThunk("task/editPost", async (action) => {
   if(action.status === "newTask"){
     await axios.put(`${newTask}/${action.id}`,{...action})
-  }else if(action.status === "schedule"){
+  }else if(action.status === "scheduled"){
     await axios.put(`${scheduled}/${action.id}`,{...action})
   }else if(action.status === "inProgress"){
     await axios.put(`${inProgress}/${action.id}`,{...action})

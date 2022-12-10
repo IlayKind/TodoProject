@@ -2,13 +2,12 @@ import React from 'react';
 import {checkTask, deleteTaskItem, editTaskItem} from "../../../store/TaskSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {deletePost, publicationPost} from "../../../store/asyncRequest/AsyncCreated";
-import {taskSelector} from "../../../store/Selector";
+import {nanoid} from "nanoid";
 
 
 const OptionTask = ({item, setEdit}) => {
   const {id, status, completed} = item;
   const dispatch = useDispatch();
-  const arr = useSelector(taskSelector)
   const deleteTask = (status, id) => {
     dispatch(deleteTaskItem({
       status: status,
@@ -28,12 +27,14 @@ const OptionTask = ({item, setEdit}) => {
   const check = (item) => {
     const obj = {...item}
     obj.completed = true;
-    obj.id = arr.completed.length;
+    obj.id = nanoid();
     obj.status = "completed";
     obj.option = false;
     dispatch(checkTask(item))
     dispatch(publicationPost(obj))
+    console.log(obj)
     dispatch(deletePost(item))
+    console.log(item)
   }
   return (
     <div className={!completed ? 'option-nav' : "option-nav-completed"}>

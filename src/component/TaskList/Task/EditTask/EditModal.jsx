@@ -3,6 +3,7 @@ import '../../InputAdd/AddInputTask.scss'
 import {useDispatch} from "react-redux";
 import {saveEditTask} from "../../../../store/TaskSlice";
 import {editPost} from "../../../../store/asyncRequest/AsyncCreated";
+import InputField from "../../../InputField";
 
 const EditModal = ({edit, setEdit, task}) => {
   const dispatch = useDispatch();
@@ -13,12 +14,6 @@ const EditModal = ({edit, setEdit, task}) => {
     dataEnd: dataEnd,
     dataNext: dataNext
   });
-
-  const onChange = (e) => {
-    const newValue = {...value}
-    newValue[e.target.id] = e.target.value
-    setValue(newValue)
-  };
 
   const closeModal = () => {
     setEdit(false);
@@ -51,48 +46,52 @@ const EditModal = ({edit, setEdit, task}) => {
     <div className={edit ? "modal active" : 'modal'} onClick={closeModal}>
       <div className='modal__content' onClick={(e) => e.stopPropagation()}>
         <div className="text-field">
-          <label>Задача</label>
-          <input
+          <InputField
+            label="Задача"
+            obj={value}
             id='task'
             className='input__value'
             type='text'
             placeholder="Введите Имя задачи"
             value={value.task}
-            onChange={(e) => onChange(e)}
+            setValue={setValue}
           />
         </div>
         <div className="text-field">
-          <label>Описание задачи</label>
-          <input
+          <InputField
+            label="Описание задачи"
+            obj={value}
             id='description'
             className="input__value"
             type='text'
             placeholder="Введите описание задачи"
             value={value.description}
-            onChange={(e) => onChange(e)}/>
+            setValue={setValue}/>
         </div>
         <div className="data-input">
           <div className="date-field">
-            <label>- Начало задачи</label>
-            <input
+            <InputField
+              label="- Начало задачи"
+              obj={value}
               id='dataNext'
               className="input__date"
               type='date'
               min='01-01-2000'
               max='01-01-2100'
               value={value.dataNext}
-              onChange={(e) => onChange(e)}/>
+              setValue={setValue}/>
           </div>
           <div className="date-field">
-            <label>- Примерно окончание задачи</label>
-            <input
+            <InputField
+              label="- Примерно окончание задачи"
+              obj={value}
               id='dataEnd'
               className="input__date"
               type='date'
               min='01-01-2000'
-              min='01-01-2100'
+              max='01-01-2100'
               value={value.dataEnd}
-              onChange={(e) => onChange(e)}/>
+              setValue={setValue}/>
           </div>
         </div>
         <button onClick={saveEdit}>
