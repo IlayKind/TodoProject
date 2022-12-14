@@ -1,12 +1,16 @@
-import React from 'react';
-import {checkTask, deleteTaskItem, editTaskItem} from "../../../store/TaskSlice";
+import React, {useState} from 'react';
+import {checkTask, deleteTaskItem, editTaskItem, progressTaskItem} from "../../../store/TaskSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {deletePost, publicationPost} from "../../../store/asyncRequest/AsyncCreated";
 import {nanoid} from "nanoid";
+import {taskSelector} from "../../../store/Selector";
+import TimerModal from "./Timer/TimerModal";
 
 
 const OptionTask = ({item, setEdit}) => {
-  const {id, status, completed} = item;
+  const {inProgress} = useSelector(taskSelector);
+  const [time, setTime] = useState(false)
+  const {id, status, completed, progress} = item;
   const dispatch = useDispatch();
   const deleteTask = (status, id) => {
     dispatch(deleteTaskItem({
@@ -36,17 +40,25 @@ const OptionTask = ({item, setEdit}) => {
     dispatch(deletePost(item))
     console.log(item)
   }
+
+  const progressOption = () => {
+    setTime(true)
+  }
+
+  console.log(inProgress)
   return (
     <div className={!completed ? 'option-nav' : "option-nav-completed"}>
-      <button onClick={() => deleteTask(status, id)}>
+      <button className='btn-option' onClick={() => deleteTask(status, id)}>
         <img width='22px' height='22px' src='/img/delete.png'/>
       </button>
       {
-        !completed ? <>
-          <button onClick={() => editTask(item)}><img width='16px' height='16px' src='/img/edit.png'/></button>
-          <button onClick={() => check(item)}><img width='16px' height='16px' src='/img/check.png'/></button>
+        !completed && !progress ? <>
+          <button className='btn-option' onClick={() => editTask(item)}><img width='16px' height='16px' src='/img/edit.png'/></button>
+          <button className='btn-option' onClick={() => check(item)}><img width='16px' height='16px' src='/img/check.png'/></button>
+          <button className='btn-option' onClick={() => progressOption(item)} ><img width='17px' height='17px' src='/img/time.png'/></button>
         </> : ""
       }
+      <TimerModal item={item} time={time} setTime={setTime}/>
     </div>
   );
 };

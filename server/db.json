@@ -1,58 +1,52 @@
 {
-  "newTask": [
+  "newTask": [],
+  "scheduled": [],
+  "inProgress": [
     {
-      "id": "Rb5jDF0mKmvEzfoJj0AeM",
-      "body": "fddgfавпytu5445",
-      "description": "vcvcvfвапgj",
-      "dataEnd": "2022-12-11",
-      "dataNext": "2022-12-10",
-      "status": "newTask"
-    },
-    {
-      "id": "donoFtAQljTkUxP159Plx",
-      "body": "fddgf",
-      "description": "h",
-      "dataNext": "2022-12-11",
-      "timer": "0:00:00",
-      "dataEnd": "2022-12-16",
-      "status": "newTask",
-      "completed": false,
-      "option": false
-    }
-  ],
-  "scheduled": [
-    {
-      "id": "De0BXxFdFE5jhqVLXsO1I",
-      "body": "fdgdgfgfdhdyt45",
-      "description": "fbvcvcc 7646",
-      "dataEnd": "2022-12-11",
-      "dataNext": "2022-12-10",
-      "status": "scheduled"
-    }
-  ],
-  "inProgress": [],
-  "completed": [
-    {
-      "id": "Ww4FPAviQktiR4LVOYpE0",
-      "body": "gf",
-      "description": "h",
-      "dataNext": "2022-12-09",
-      "timer": "0:00:00",
-      "dataEnd": "2022-12-10",
-      "status": "completed",
-      "completed": true,
-      "option": false
-    },
-    {
-      "id": "1bhwqePoy6ESY9ZjQ157q",
+      "id": "gWfQnfqrfpzdJtteLIOds",
       "body": "fddgf",
       "description": "vcvcvf",
-      "dataNext": "2022-12-09",
-      "timer": "0:00:00",
-      "dataEnd": "2022-12-10",
-      "status": "completed",
-      "completed": true,
-      "option": false
+      "dataNext": "2022-12-14",
+      "timer": "2022-12-15T00:00:00",
+      "dataEnd": "2022-12-15",
+      "status": "inProgress",
+      "completed": false,
+      "progress": true,
+      "option": false,
+      "timeActive": false
     }
-  ]
+  ],
+  "completed": [
+    {
+      "id": "duakdhuq2evsLbsoR3bRw",
+      "body": "3456",
+      "description": "34567",
+      "dataEnd": "2022-12-16",
+      "dataNext": "2022-12-15",
+      "status": "completed",
+      "option": false,
+      "completed": true
+    }
+  ],
+  "users": [
+    {
+      "image": "",
+      "name": "Papa",
+      "lastName": "Jons",
+      "email": "per.don@mail.ru",
+      "password": "punckrock1",
+      "id": 2
+    },
+    {
+      "name": "Илья",
+      "lastName": "Финаев",
+      "email": "ilya-finaev@mail.ru",
+      "image": "plant.png",
+      "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk3OGI1NmM2NmVhYmIwZDlhNmJhOGNhMzMwMTU2NGEyMzhlYWZjODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG9kby1hdXRoLThkZTgxIiwiYXVkIjoidG9kby1hdXRoLThkZTgxIiwiYXV0aF90aW1lIjoxNjcxMDIzMzIyLCJ1c2VyX2lkIjoiSG9xVFREME10b1FkQ2ZZdnA3aloxYUttZk53MSIsInN1YiI6IkhvcVRURDBNdG9RZENmWXZwN2paMWFLbWZOdzEiLCJpYXQiOjE2NzEwMjMzMjIsImV4cCI6MTY3MTAyNjkyMiwiZW1haWwiOiJpbHlhLWZpbmFldkBtYWlsLnJ1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImlseWEtZmluYWV2QG1haWwucnUiXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.0wVd3fa14wZz71jZ7lzeP0y81dbyt18iU4vCeQqGe-ZA8KLddTlzR1yBlIe6b6wHVvlKzKayeQVO4XMxwKN3E578z5bbDzl1eMm129R_BYvuwBQxTfbGOvXY4xBaAF15hRGCHQatXL8PJ5ZZjh0hFzoHZRiaONL6tvKuSohwkoDXdB8SGccv4CBIgVlmla8QWO0tduTUbDOau3arXnG877Z-Sr2N-zvD17swg-oqNq8JfevA30zxeqfUGeITzog9ELP7zlQehjHlwjmDAXdQ2xAd7BC6IPy3fAplwlqGi2X1bmfCdQQyibIkLlbH868bmdyL9GVi004eG0djBu7Vtg",
+      "id": "S8oGyN1G0d3MGaYkZp4bV"
+    }
+  ],
+  "activeUser": {
+    "email": "ilya-finaev@mail.ru"
+  }
 }

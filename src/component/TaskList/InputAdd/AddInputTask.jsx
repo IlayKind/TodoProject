@@ -6,27 +6,20 @@ import {publicationPost} from "../../../store/asyncRequest/AsyncCreated";
 import { nanoid } from 'nanoid'
 import InputField from "../../InputField";
 
-
+const objectValue = {
+  task: '',
+  description: '',
+  dataEnd: '',
+  dataNext: ''
+}
 
 const AddInputTask = ({active, setActive}) => {
   const dispatch = useDispatch();
-  const [value, setValue] = React.useState({
-    task: '',
-    description: '',
-    dataEnd: '',
-    dataNext: ''
-  });
+  const [value, setValue] = React.useState(objectValue);
   const [statusTask, setStatusTask] = React.useState({
     newTask: true,
     scheduled: false
   });
-
-
-  const onChange = (e) => {
-    const newValue = {...value}
-    newValue[e.target.id] = e.target.value
-    setValue(newValue)
-  };
 
   const addTask = () => {
     if (value.task === "" || value.description === '' || value.dataEnd === "" || value.dataNext === '') return
@@ -39,17 +32,14 @@ const AddInputTask = ({active, setActive}) => {
       dataEnd: value.dataEnd,
       status: statusTask.newTask ? "newTask" : "scheduled",
       completed: false,
+      progress: false,
       option: false,
+      timeActive: false,
     }
     dispatch(addTaskStore(task))
     dispatch(publicationPost(task))
     setActive(!active)
-    setValue({
-      task: '',
-      description: '',
-      dataEnd: '',
-      dataNext: ''
-    })
+    setValue(objectValue)
     setStatusTask({
       newTask: true,
       scheduled: false
@@ -58,12 +48,7 @@ const AddInputTask = ({active, setActive}) => {
 
   const closeModal = () => {
     setActive(false);
-    setValue({
-      task: '',
-      description: '',
-      dataEnd: '',
-      dataNext: ''
-    })
+    setValue(objectValue)
   };
 
   const checked = () => {

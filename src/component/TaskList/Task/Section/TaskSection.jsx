@@ -5,8 +5,8 @@ import {taskSelector} from "../../../../store/Selector";
 import Section from "./Section";
 
 const TaskSection = () => {
-  const {newTask, scheduled, inProgress, completed, editTask} = useSelector(taskSelector);
-  console.log(editTask)
+  const {newTask, scheduled, inProgress, completed} = useSelector(taskSelector);
+
   return (
     <div className='task__section'>
       <div className='section'>

@@ -1,28 +1,28 @@
 import React from 'react';
 import '../../InputAdd/AddInputTask.scss'
-import {useDispatch} from "react-redux";
-import {saveEditTask} from "../../../../store/TaskSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {clearEditTaskItem, saveEditTask} from "../../../../store/TaskSlice";
 import {editPost} from "../../../../store/asyncRequest/AsyncCreated";
 import InputField from "../../../InputField";
+import {taskSelector} from "../../../../store/Selector";
 
-const EditModal = ({edit, setEdit, task}) => {
+const objectTask = {
+  task: "",
+  description: "",
+  dataEnd: "",
+  dataNext: ""
+}
+
+const EditModal = ({edit, setEdit}) => {
   const dispatch = useDispatch();
-  const {id, body, description, dataNext, dataEnd, status} = task;
-  const [value, setValue] = React.useState({
-    task: body,
-    description: description,
-    dataEnd: dataEnd,
-    dataNext: dataNext
-  });
+  const {editTask} = useSelector(taskSelector)
+  const {id,status} = editTask;
+  const [value, setValue] = React.useState(objectTask);
 
   const closeModal = () => {
     setEdit(false);
-    setValue({
-      task: body,
-      description: description,
-      dataEnd: dataEnd,
-      dataNext: dataNext
-    })
+    setValue(objectTask)
+    dispatch(clearEditTaskItem())
   };
 
   const saveEdit = () => {
@@ -41,7 +41,9 @@ const EditModal = ({edit, setEdit, task}) => {
     dispatch(saveEditTask(item));
     dispatch(editPost(item))
     setEdit(false)
+    dispatch(clearEditTaskItem())
   }
+
   return (
     <div className={edit ? "modal active" : 'modal'} onClick={closeModal}>
       <div className='modal__content' onClick={(e) => e.stopPropagation()}>

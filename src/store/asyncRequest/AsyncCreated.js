@@ -21,6 +21,8 @@ export const publicationPost = createAsyncThunk("task/publicationPost", async (a
     await axios.post(newTask,action)
   }else if(action.status === "scheduled"){
     await axios.post(scheduled,action)
+  }else if(action.status === "inProgress"){
+    await axios.post(inProgress,action)
   }else{
     await axios.post(completed,action)
   }

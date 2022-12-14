@@ -6,16 +6,22 @@ import {useDispatch} from "react-redux";
 import {setUser} from "../../store/AuthorizationUserSlice";
 import { useNavigate } from "react-router-dom";
 import InputField from "../InputField";
+import {registrationPost} from "../../store/asyncRequest/AsyncCreatedUsers";
+import {nanoid} from "nanoid";
+
+const objectValue ={
+  id: nanoid(),
+  name: '',
+  lastName: '',
+  email: '',
+  password: '',
+  image: ""
+}
 
 const Registration = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [value, setValue] = React.useState({
-    name: '',
-    lastName: '',
-    email: '',
-    password: ''
-  });
+  const [value, setValue] = React.useState(objectValue);
 
   const createUser = (lastName, name, email, password) => {
     const auth = getAuth();
@@ -27,6 +33,7 @@ const Registration = () => {
           token: user.accessToken,
           id: user.uid
         }));
+        dispatch(registrationPost(value))
         navigate('/')
       })
     .catch(console.error)

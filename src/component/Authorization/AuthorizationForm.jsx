@@ -1,19 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Authorization.scss'
 import {NavLink, useNavigate} from "react-router-dom";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setUser} from "../../store/AuthorizationUserSlice";
 import InputField from "../InputField";
+import {getValuesUser, postValuesActiveUser} from "../../store/asyncRequest/AsyncCreatedUsers";
+import {userSelector} from "../../store/Selector";
 
+const objectValue = {
+  email: '',
+  password: ''
+}
 
 const AuthorizationForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [value, setValue] = React.useState({
-    email: '',
-    password: ''
-  });
+  const [value, setValue] = React.useState(objectValue);
+  const {email, password} = useSelector(userSelector)
+
 
   const handleLogin = (email, password) => {
     const auth = getAuth();
@@ -25,6 +30,7 @@ const AuthorizationForm = () => {
           token: user.accessToken,
           id: user.uid
         }));
+        dispatch(postValuesActiveUser(value.email))
         navigate('/TaskList')
       })
       .catch(console.error)
