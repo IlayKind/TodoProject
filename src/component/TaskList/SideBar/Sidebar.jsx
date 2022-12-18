@@ -6,8 +6,7 @@ const Sidebar = () => {
     <div className='sidebar__container'>
       <div className='sidebar-links'>
         <div className='sidebar__logo'>
-          <img width='22px' height='22px' src='/img/plant.png'/>
-          <h1 className='sidebar__logo-text'>Freya.</h1>
+          <span className='logo-title'>C<div className='logo'><img width='45px' height='45px' src='/img/logo.png'/></div>SMO</span>
         </div>
         <input
         className="input-sort"
@@ -16,19 +15,19 @@ const Sidebar = () => {
         />
         <div className='links'>
           <NavLink className='link' to='/TaskList'>
-            Доска задач
+            Task board
           </NavLink>
           <NavLink className='link' to='/TaskList'>
-            Доска задач
+            Task board
           </NavLink>
           <NavLink className='link' to='/TaskList'>
-            Доска задач
+            Task board
           </NavLink>
           <NavLink className='link' to='/TaskList'>
-            Доска задач
+            Task board
           </NavLink>
           <NavLink className='link' to='/TaskList'>
-            Доска задач
+            Task board
           </NavLink>
         </div>
       </div>

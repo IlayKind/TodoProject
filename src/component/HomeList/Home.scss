@@ -1,0 +1,180 @@
+.home-container{
+  width: 100%;
+  height: 100vh;
+  background-color: #35355d;
+  background-image:url(img/fone4.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  .blackout-fon{
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(58, 57, 57, 0.37);
+  }
+
+  .home-content{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+
+    .greetings-content{
+      width: 60%;
+      height: 100vh;
+
+      .header-content{
+        margin: 20px 0 0 20px;
+
+        .header-logo{
+
+
+          .logo-title{
+            font-family: Orbitron;
+            font-weight: 500;
+            font-size: 35px;
+            color: #f5f1f1;
+            display: flex;
+            align-items: flex-end;
+
+            .logo{
+              display: flex;
+            }
+          }
+        }
+      }
+
+      .contacts{
+        display: flex;
+        flex-direction: column;
+        margin: 300px 0 0 20px;
+
+        .navbar-title{
+          font-family: Orbitron;
+          font-weight: 500;
+          font-size: 20px;
+          color: #feffff;
+          margin: 0 0 10px 0;
+        }
+
+        .contact-link{
+          display: flex;
+          align-items: center;
+
+
+          a{
+            margin: 0 10px 0 0;
+          }
+        }
+
+
+
+      }
+
+      .greeting-block{
+        margin: 180px 0 0 20px;
+
+        .greeting-text{
+          text-align: center;
+          font-family: Orbitron;
+          font-weight: 500;
+          font-size: 20px;
+          color: #ffffff;
+
+
+          .open-text{
+            color: #f2f6f6;
+            text-shadow: 0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #00eaff,
+            0 0 82px #00d0ff,
+            0 0 92px #3700ff,
+            0 0 102px #00c4ff,
+            0 0 151px #008cff;
+          }
+        }
+      }
+
+    }
+
+    .transition-content{
+      width: 40%;
+      position: relative;
+
+
+
+      .position-block{
+        position: absolute;
+        top: 32%;
+        left: 10%;
+        .click-table{
+          width: 400px;
+          height: 200px;
+          border: 10px solid #eff3f3;
+          background: none;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          box-shadow: 0 0 .2rem #fff,
+          0 0 .2rem #fff,
+          0 0 2rem #1389fe,
+          0 0 0.8rem #13b7fe,
+          0 0 2.8rem #13b7fe,
+          inset 0 0 1.3rem #13dbfe;
+
+          span{
+            margin: 0 0 120px 0;
+            text-align: center;
+            font-family: Orbitron;
+            font-weight: 400;
+            font-size: 40px;
+            color: #f2f6f6;
+            text-shadow: 0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #00eaff,
+            0 0 82px #00d0ff,
+            0 0 92px #3700ff,
+            0 0 102px #00c4ff,
+            0 0 151px #008cff;
+            position: relative;
+
+            h1{
+              font-family: Orbitron;
+              font-weight: 700;
+              font-size: 110px;
+              color: #f2f6f6;
+              position: absolute;
+              top: 44px;
+              left: -55px;
+              animation: flicker 5s infinite alternate;
+              @keyframes flicker {
+                0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                  text-shadow: 0 0 7px #fff,
+                  0 0 10px #fff,
+                  0 0 21px #fff,
+                  0 0 42px #00eaff,
+                  0 0 82px #00d0ff,
+                  0 0 92px #3700ff,
+                  0 0 102px #00c4ff,
+                  0 0 151px #008cff;
+                }
+                20%, 24%, 55% {
+                  text-shadow: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+
+    }
+  }
+}

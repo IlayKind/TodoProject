@@ -1,12 +1,13 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './Authorization.scss'
 import {NavLink, useNavigate} from "react-router-dom";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {setUser} from "../../store/AuthorizationUserSlice";
 import InputField from "../InputField";
-import {getValuesUser, postValuesActiveUser} from "../../store/asyncRequest/AsyncCreatedUsers";
-import {userSelector} from "../../store/Selector";
+import {postValuesActiveUser} from "../../store/asyncRequest/AsyncCreatedUsers";
+import {motion} from "framer-motion"
+
 
 const objectValue = {
   email: '',
@@ -17,7 +18,6 @@ const AuthorizationForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [value, setValue] = React.useState(objectValue);
-  const {email, password} = useSelector(userSelector)
 
 
   const handleLogin = (email, password) => {
@@ -37,8 +37,36 @@ const AuthorizationForm = () => {
   }
 
   return (
-    <div className='authorization__list'>
-      <h3 className='authorization__title'>Войдите в аккаунт</h3>
+    <div className='form-container'>
+      <div className='blackout'>
+      </div>
+      <motion.div
+        initial={{ opacity: 0,  }}
+        animate={{ opacity: 1,  }}
+        transition={{ duration: 1, delay: 0.9, }}
+        className='authorization-logo'
+      >
+        <span className='logo-title'>C<div className='logo'><img width='60px' height='60px' src='/img/logo.png'/></div>SMO</span>
+      </motion.div>
+      <div className='block-group'>
+      <motion.div
+        initial={{ y: -2000,  }}
+        animate={{ y:0  }}
+        transition={{ duration: 0.9, delay: 0, }}
+        className='top-block'
+      >
+      </motion.div>
+      <motion.div
+        initial={{ y: 2000,  }}
+        animate={{ y:0  }}
+        transition={{ duration: 0.9, delay: 0, }}
+        className='bottom-block'
+      >
+      </motion.div>
+    </div>
+    <motion.div initial={{ opacity: 0,  }}
+                animate={{ opacity: 1,  }}
+                transition={{ duration: 1, delay: 0.9, }} className='authorization__list'>
       <InputField
         obj={value}
         className='authorization__name'
@@ -58,13 +86,14 @@ const AuthorizationForm = () => {
         setValue={setValue}
       />
       <button onClick={() => handleLogin(value.email, value.password)} className='authorization__btn'>
-        Войти
+        Come
       </button>
 
       <NavLink to='/Registration' className='registration__link'>
-        Создать аккаунт
+        Create an account.
       </NavLink>
-    </div>
+    </motion.div>
+</div>
   );
 };
 

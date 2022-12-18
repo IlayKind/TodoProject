@@ -9,6 +9,8 @@ const TaskList = () => {
   const [addModalForm, setAddModalForm] = React.useState(false);
   return (
     <div className='container'>
+      <div className='blackout-fon'>
+      </div>
       <Sidebar/>
       <div className='content__task'>
         <HeaderNavigate setAddModalForm={setAddModalForm}/>
