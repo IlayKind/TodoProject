@@ -71,31 +71,31 @@ const AddInputTask = ({active, setActive}) => {
       <div className='modal__content' onClick={(e) => e.stopPropagation()}>
         <div className="text-field">
           <InputField
-            label="Задача"
+            label="Task"
             obj={value}
             id='task'
             className='input__value'
             type='text'
-            placeholder="Введите Имя задачи"
+            placeholder="...name Task"
             value={value.task}
             setValue={setValue}
           />
         </div>
         <div className="text-field">
           <InputField
-            label="Описание задачи"
+            label="Description task"
             obj={value}
             id='description'
             className="input__value"
             type='text'
-            placeholder="Введите описание задачи"
+            placeholder="...description Task"
             value={value.description}
             setValue={setValue}/>
         </div>
         <div className="data-input">
           <div className="date-field">
             <InputField
-              label="- Начало задачи"
+              label="- Start Task"
               obj={value}
               id='dataNext'
               className="input__date"
@@ -107,7 +107,7 @@ const AddInputTask = ({active, setActive}) => {
           </div>
           <div className="date-field">
             <InputField
-              label="- Примерно окончание задачи"
+              label="- Task End"
               obj={value}
               id='dataEnd'
               className="input__date"
@@ -121,11 +121,11 @@ const AddInputTask = ({active, setActive}) => {
         <div className='status__active'>
           <div className='checked-field'>
             <input onClick={checked} type='radio' checked={statusTask.newTask}/>
-            <label>Актуальная задача</label>
+            <label>Actual Task</label>
           </div>
           <div className='checked-field'>
             <input onClick={checked} type='radio' checked={statusTask.scheduled}/>
-            <label>Задача на будущее</label>
+            <label>Future Task</label>
           </div>
         </div>
         <button onClick={addTask}>

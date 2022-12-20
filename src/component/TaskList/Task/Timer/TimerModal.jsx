@@ -13,6 +13,7 @@ const TimerModal = ({item, time, setTime}) => {
   };
 
   const progressPush = () => {
+    if(value === '')return
     console.log(item)
     const obj = {...item}
     obj.status = "inProgress";
@@ -30,7 +31,7 @@ const TimerModal = ({item, time, setTime}) => {
     <div className={time ? "modal-time active" : 'modal-time'} onClick={closeModal}>
       <div className='modal__content-time' onClick={(e) => e.stopPropagation()}>
         <div className="text-field">
-          <label>Выбирите примерное число окончания задачи</label>
+          <label>Estimated completion date of the task</label>
           <input
             className='input__value'
             type='date'
@@ -39,7 +40,7 @@ const TimerModal = ({item, time, setTime}) => {
           />
         </div>
         <button className='btn-time-active' onClick={progressPush}>
-          Подтвердить
+          Add
         </button>
       </div>
     </div>

@@ -1,7 +1,7 @@
 .modal{
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.29);
   position: fixed;
   top: 0;
   left: 0;
@@ -11,22 +11,23 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+  z-index: 8;
 }
 
 .modal.active{
   opacity: 1;
   pointer-events: all;
-  z-index: 2;
+  z-index: 8;
 }
 
 .modal__content{
   padding: 20px;
   border-radius: 20px;
-  background-color: #3a3939;
+  background-color: #232222;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 15px rgb(49, 49, 49);
-  z-index: 2;
+  z-index: 8;
 
   .text-field{
     display: flex;

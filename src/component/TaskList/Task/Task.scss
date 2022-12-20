@@ -1,103 +1,73 @@
-.task__section{
+table{
   width: 100%;
-  height: 100vh;
   display: flex;
-  z-index: 1;
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
 
-    .section{
-      width: 25%;
-      height: 100vh;
+  thead{
+    tr{
+      width: 100%;
+      height: 20%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
 
-
-      .section-title{
-        width: 100%;
-        height: 60px;
+      .title-section{
+        width: 25%;
         display: flex;
-        align-items: flex-end;
         justify-content: center;
-        border-bottom: 2px solid #e1e1e1;
-
-        h3{
-          font-family: Montserrat;
-          font-weight: 600;
-          font-size: 18px;
-          margin-bottom: 10px;
-          color: #2d2d2d;
-          display: flex;
-
-
-          span{
-            width: 26px;
-            height: 20px;
-            background: #b5c9c9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #839696;
-            border-radius: 5px;
-            margin: 0 0 0 5px;
-          }
-        }
-      }
-
-      .section-content{
-        width: 100%;
-        height: 100vh;
-        border-right: 2px solid #e1e1e1;
-      }
-    }
-
-  .section-end{
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-    .section-title{
-      width: 100%;
-      height: 60px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      border-bottom: 2px solid #e1e1e1;
-
-      h3{
-        font-family: Montserrat;
-        font-weight: 600;
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #2d2d2d;
-        display: flex;
+        border-bottom: 1px solid rgba(58, 57, 57, 0.67);
         span{
-          width: 26px;
-          height: 20px;
-          background: #b5c9c9;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #839696;
+          margin: 115px 0 5px 0;
+          font-family: Orbitron;
+          font-weight: 500;
+          font-size: 20px;
+          color: #b5c9c9;
+          padding: 3px 8px;
+          background: rgba(58, 57, 57, 0.26);
           border-radius: 5px;
-          margin: 0 0 0 5px;
         }
       }
-    }
-
-    .section-content{
-      width: 100%;
-      height: 100vh;
-
     }
   }
+
+  tbody{
+    width: 100%;
+    .task-string{
+      width: 100%;
+      height: 82.5vh;
+
+      display: flex;
+      .task-section{
+        width: 100%;
+        border-right: 3px solid rgba(58, 57, 57, 0.29);
+
+        .task-container{
+          width: 96%;
+          height: 98%;
+          background: rgba(85, 87, 87, 0.16);
+          margin: 10px auto;
+          border-radius: 20px;
+          position: relative;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
 
   //____________Task-Item_____________________
   .task-item{
     width: 90%;
-    min-height: 100px;
-    background: #1e5964;
+    max-height: 200px;
+    background: rgba(83, 185, 204, 0.09);
+    border: 5px solid rgba(38, 72, 72, 0.31);
     margin: 15px auto;
     border-radius: 10px;
     color: #b5c9c9;
@@ -105,6 +75,10 @@
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .1rem #fff,
+    0 0 1.0rem #13b7fe,
+    inset 0 0 0.3rem #13dbfe;
 
 
 
@@ -115,7 +89,7 @@
       .timer-item{
         margin: 0 5px 5px 0;
         span{
-          font-family: Montserrat;
+          font-family: Orbitron;
           font-weight: 500;
           font-size: 10px;
 
@@ -125,25 +99,28 @@
     }
 
         .task-date{
-          font-family: Montserrat;
+          font-family: Orbitron;
           font-weight: 500;
           font-size: 8px;
           margin: 2px 0 5px 5px;
+          color: #cdeaea;
         }
         .task-title{
-          font-family: Montserrat;
-          font-weight: 600;
+          font-family: Orbitron;
+          font-weight: 500;
           font-size: 16px;
           margin: 5px 0 0 5px;
+          color:#cdeaea;
         }
         .task-description{
           display: flex;
-          font-family: Montserrat;
+          font-family: Orbitron;
           font-weight: 500;
           font-size: 12px;
           margin: 10px 0 10px 5px;
           word-wrap: break-word;
           white-space: normal;
+          color:#cdeaea;
         }
         .option{
           width: 20px;
@@ -159,22 +136,22 @@
 
     .option-nav {
       position: absolute;
-      top: 28px;
-      right: 5px;
-      width: 20px;
+      top: 5px;
+      right: 20px;
+      max-width: 120px;
+      height: 20px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       border-radius: 6px;
-      background: #5b929d;
-      border: 1px solid #21616e;
+      background: rgba(91, 146, 157, 0.44);
+      border: 2px solid rgba(33, 97, 110, 0.73);
       z-index: 3;
 
       .btn-option {
         background: none;
         border: none;
         cursor:pointer;
-        margin: 5px 0 5px 0;
+        margin: 5px 5px 5px 5px;
       }
     }
   }
@@ -183,8 +160,9 @@
 
   .task-item-completed{
     width: 90%;
-    min-height: 100px;
-    background: #595f60;
+    max-height: 200px;
+    background: rgba(31, 77, 44, 0.32);
+    border: 5px solid rgba(38, 72, 72, 0.31);
     margin: 15px auto;
     border-radius: 10px;
     color: #242828;
@@ -192,29 +170,36 @@
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .1rem #fff,
+    0 0 1.0rem #13fe79,
+    inset 0 0 0.3rem #13fe3a;
 
 
 
     .task-date{
-      font-family: Montserrat;
+      font-family: Orbitron;
       font-weight: 500;
       font-size: 8px;
       margin: 2px 0 5px 5px;
+      color: rgba(19, 254, 121, 0.7);
     }
     .task-title{
-      font-family: Montserrat;
-      font-weight: 600;
+      font-family: Orbitron;
+      font-weight: 500;
       font-size: 16px;
       margin: 5px 0 0 5px;
+      color: rgba(19, 254, 121, 0.7);
     }
     .task-description{
       display: flex;
-      font-family: Montserrat;
+      font-family: Orbitron;
       font-weight: 500;
       font-size: 12px;
       margin: 10px 0 10px 5px;
       word-wrap: break-word;
       white-space: normal;
+      color: rgba(19, 254, 121, 0.7);
     }
     .option{
       width: 20px;
@@ -230,15 +215,16 @@
 
     .option-nav {
       position: absolute;
-      top: 28px;
-      right: 5px;
+      top: 5px;
+      right: 20px;
       width: 20px;
+      height: 20px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       border-radius: 6px;
-      background: #5b929d;
-      border: 1px solid #21616e;
+      background: rgba(91, 146, 157, 0.44);
+      border: 2px solid rgba(33, 97, 110, 0.73);
+      z-index: 3;
 
       .btn-option {
         background: none;
@@ -252,21 +238,22 @@
 
     .option-nav-completed {
       position: absolute;
-      top: 28px;
-      right: 5px;
-      width: 20px;
+      top: 5px;
+      right: 20px;
+      max-width: 120px;
+      height: 20px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       border-radius: 6px;
-      background: #889ea2;
-      border: 1px solid #182123;
+      background: rgba(91, 146, 157, 0.44);
+      border: 2px solid rgba(33, 97, 110, 0.73);
+      z-index: 3;
 
       button {
         background: none;
         border: none;
         cursor:pointer;
-        margin: 5px 0 5px 0;
+        margin: 5px 5px 5px 5px;
       }
     }
   }
@@ -277,7 +264,7 @@
 .modal{
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.46);
   position: fixed;
   top: 0;
   left: 0;
@@ -287,29 +274,33 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+  z-index: 8;
 }
 
 .modal.active{
   opacity: 1;
   pointer-events: all;
-  z-index: 2;
+  z-index: 8;
 }
 
 .modal__content{
+  width: 400px;
+  height: 440px;
+  border: 6px solid rgba(150, 148, 148, 0.51);
   padding: 20px;
   border-radius: 20px;
-  background-color: #3a3939;
+  background-color: rgba(89, 186, 215, 0.24);
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 15px rgb(49, 49, 49);
-  z-index: 2;
+  z-index: 8;
 
   .text-field{
     display: flex;
     flex-direction: column;
 
     label{
-      font-family: Montserrat;
+      font-family: Orbitron;
       font-weight: 500;
       font-size: 12px;
       margin: 0 0 5px 10px;
@@ -319,7 +310,7 @@
       width: 350px;
       height: 40px;
       font-size: 15px;
-      font-family: Montserrat;
+      font-family: Orbitron;
       font-weight: 500;
       border-radius: 4px;
       margin: 0 0 10px 0;
@@ -345,7 +336,7 @@
       flex-direction: row-reverse;
       margin: 0 0 15px 0;
       label{
-        font-family: Montserrat;
+        font-family: Orbitron;
         font-weight: 500;
         font-size: 11px;
         margin: 0 0 5px 10px;
@@ -353,13 +344,13 @@
       }
 
       .input__date{
-        width: 100px;
+        width: 110px;
         height: 30px;
         font-size: 11px;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 2px;
         margin: 5px 0 0 0;
-        font-family: Montserrat;
+        font-family: Orbitron;
         font-weight: 500;
         padding: 0.375rem 0.3rem;
         background: #b5c9c9;
@@ -375,7 +366,7 @@
       display: flex;
       margin: 0 0 10px 0;
       label{
-        font-family: Montserrat;
+        font-family: Orbitron;
         font-weight: 500;
         font-size: 11px;
         margin: 0 0 5px 10px;
@@ -392,9 +383,23 @@
     border-radius: 4px;
     margin-top: 20px;
     cursor: pointer;
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 13px;
+    font-family: Orbitron;
+    font-weight: 700;
+    font-size: 14px;
+    color: #404f4f;
+  }
+
+  .btn-save-edit{
+    width: 120px;
+    height: 30px;
+    border: none;
+    background: #a5cece;
+    border-radius: 4px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-family: Orbitron;
+    font-weight: 700;
+    font-size: 14px;
     color: #404f4f;
   }
 }
@@ -423,9 +428,10 @@
 }
 
 .modal__content-time{
+  border: 6px solid rgba(150, 148, 148, 0.51);
+  background-color: rgba(89, 186, 215, 0.24);
   padding: 20px;
   border-radius: 20px;
-  background-color: #3a3939;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 15px rgb(49, 49, 49);
@@ -436,7 +442,7 @@
     flex-direction: column;
 
     label{
-      font-family: Montserrat;
+      font-family: Orbitron;
       font-weight: 500;
       font-size: 12px;
       margin: 0 0 5px 10px;
@@ -446,7 +452,7 @@
       width: 350px;
       height: 40px;
       font-size: 15px;
-      font-family: Montserrat;
+      font-family: Orbitron;
       font-weight: 500;
       border-radius: 4px;
       margin: 0 0 10px 0;
@@ -472,7 +478,7 @@
       flex-direction: row-reverse;
       margin: 0 0 15px 0;
       label{
-        font-family: Montserrat;
+        font-family: Orbitron;
         font-weight: 500;
         font-size: 11px;
         margin: 0 0 5px 10px;
@@ -486,7 +492,7 @@
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 2px;
         margin: 5px 0 0 0;
-        font-family: Montserrat;
+        font-family: Orbitron;
         font-weight: 500;
         padding: 0.375rem 0.3rem;
         background: #b5c9c9;
@@ -502,7 +508,7 @@
       display: flex;
       margin: 0 0 10px 0;
       label{
-        font-family: Montserrat;
+        font-family: Orbitron;
         font-weight: 500;
         font-size: 11px;
         margin: 0 0 5px 10px;
@@ -519,8 +525,8 @@
     border-radius: 4px;
     margin-top: 20px;
     cursor: pointer;
-    font-family: Montserrat;
-    font-weight: 600;
+    font-family: Orbitron;
+    font-weight: 700;
     font-size: 13px;
     color: #404f4f;
   }

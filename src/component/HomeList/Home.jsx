@@ -27,7 +27,8 @@ const Home = () => {
             >
               <span className='greeting-text'>Hello user!<br/>
               <br/>
-              This product is for informational purposes only.
+              This product is for informational purposes only.<br/>
+              It is a collection of applications I have created.<br/>
               It happens that I use it for my own purposes and I really hope that you will like the way it is made.<br/>
               I wish you a pleasant use!<br/>
               <br/>
@@ -58,8 +59,6 @@ const Home = () => {
             initial={{ opacity: 0,  }}
             animate={{ opacity: 1,  }}
             transition={{ duration: 3 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
             className="position-block"
           >
             <div className='click-table' >

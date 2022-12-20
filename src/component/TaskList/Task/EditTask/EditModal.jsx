@@ -49,31 +49,31 @@ const EditModal = ({edit, setEdit}) => {
       <div className='modal__content' onClick={(e) => e.stopPropagation()}>
         <div className="text-field">
           <InputField
-            label="Задача"
+            label="Task"
             obj={value}
             id='task'
             className='input__value'
             type='text'
-            placeholder="Введите Имя задачи"
+            placeholder="...name Task"
             value={value.task}
             setValue={setValue}
           />
         </div>
         <div className="text-field">
           <InputField
-            label="Описание задачи"
+            label="description Task"
             obj={value}
             id='description'
             className="input__value"
             type='text'
-            placeholder="Введите описание задачи"
+            placeholder="...description Task"
             value={value.description}
             setValue={setValue}/>
         </div>
         <div className="data-input">
           <div className="date-field">
             <InputField
-              label="- Начало задачи"
+              label="- Start Task"
               obj={value}
               id='dataNext'
               className="input__date"
@@ -85,7 +85,7 @@ const EditModal = ({edit, setEdit}) => {
           </div>
           <div className="date-field">
             <InputField
-              label="- Примерно окончание задачи"
+              label="- End Task"
               obj={value}
               id='dataEnd'
               className="input__date"
@@ -96,7 +96,7 @@ const EditModal = ({edit, setEdit}) => {
               setValue={setValue}/>
           </div>
         </div>
-        <button onClick={saveEdit}>
+        <button className='btn-save-edit' onClick={saveEdit}>
           Save
         </button>
       </div>

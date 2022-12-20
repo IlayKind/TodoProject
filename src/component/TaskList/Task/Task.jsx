@@ -7,17 +7,6 @@ import {optionActive} from "../../../store/TaskSlice";
 import { getPost } from "../../../store/asyncRequest/AsyncCreated";
 import {getImageUser, getValuesUser} from "../../../store/asyncRequest/AsyncCreatedUsers";
 import Timer from "./Timer/Timer";
-import TimerModal from "./Timer/TimerModal";
-
-
-const date = new Date("Jan 1 2023 00:00:00")
-const count = () => {
-  const now = new Date();
-  const gap = date - now;
-  return gap
-};
-
-
 
 const Task = ({activeTask}) => {
       const dispatch = useDispatch();
