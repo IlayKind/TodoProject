@@ -31,7 +31,7 @@ const AuthorizationForm = () => {
           id: user.uid
         }));
         dispatch(postValuesActiveUser(value.email))
-        navigate('/TaskList')
+        navigate('/Universe')
       })
       .catch(console.error)
   }
@@ -50,15 +50,15 @@ const AuthorizationForm = () => {
       </motion.div>
       <div className='block-group'>
       <motion.div
-        initial={{ y: -2000,  }}
-        animate={{ y:0  }}
+        initial={{ y: -300,opacity: 0,  }}
+        animate={{ y:0,opacity: 1,   }}
         transition={{ duration: 0.9, delay: 0, }}
         className='top-block'
       >
       </motion.div>
       <motion.div
-        initial={{ y: 2000,  }}
-        animate={{ y:0  }}
+        initial={{ y: 400, opacity: 0,  }}
+        animate={{ y:0, opacity: 1,  }}
         transition={{ duration: 0.9, delay: 0, }}
         className='bottom-block'
       >

@@ -26,7 +26,7 @@ const TimerModal = ({item, time, setTime}) => {
     dispatch(progressTaskItem(obj))
     closeModal()
   }
-  console.log(value)
+
   return (
     <div className={time ? "modal-time active" : 'modal-time'} onClick={closeModal}>
       <div className='modal__content-time' onClick={(e) => e.stopPropagation()}>

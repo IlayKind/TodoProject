@@ -1,73 +1,8 @@
 {
   "newTask": [],
   "scheduled": [],
-  "inProgress": [
-    {
-      "id": "EzGKYJ68YI56zyFurJKow",
-      "body": "fddgf",
-      "description": "vcvcvf",
-      "dataNext": "2022-12-18",
-      "timer": "2022-12-19T00:00:00",
-      "dataEnd": "2022-12-19",
-      "status": "inProgress",
-      "completed": false,
-      "progress": true,
-      "option": false,
-      "timeActive": false
-    },
-    {
-      "id": "400jqQiK4BeEJzrgdEKoS",
-      "body": "gf",
-      "description": "vcvcvf",
-      "dataNext": "2022-12-17",
-      "timer": "2022-12-21T00:00:00",
-      "dataEnd": "2022-12-23",
-      "status": "inProgress",
-      "completed": false,
-      "progress": true,
-      "option": false,
-      "timeActive": false
-    },
-    {
-      "id": "wF-WmRDtUG8hUGqXVWtVH",
-      "body": "Кузьмин Руслан Эдуардович",
-      "description": "vcvcvf",
-      "dataEnd": "2022-12-23",
-      "dataNext": "2022-12-21",
-      "status": "inProgress",
-      "option": false,
-      "progress": true,
-      "timer": "T00:00:00"
-    }
-  ],
-  "completed": [
-    {
-      "id": "2tsd2hJeTrL12keZcAKVJ",
-      "body": "fddgf",
-      "description": "vcvcvf",
-      "dataNext": "2022-12-17",
-      "timer": "0:00:00",
-      "dataEnd": "2022-12-24",
-      "status": "completed",
-      "completed": true,
-      "progress": false,
-      "option": false,
-      "timeActive": false
-    },
-    {
-      "id": "BMf8RxTVyNUUSQb6uH6nq",
-      "body": "fddgf",
-      "description": "h",
-      "dataNext": "2022-12-21",
-      "timer": "0:00:00",
-      "dataEnd": "2022-12-23",
-      "status": "completed",
-      "completed": true,
-      "progress": false,
-      "option": false,
-      "timeActive": false
-    }
-  ],
+  "inProgress": [],
+  "completed": [],
   "users": [
     {
       "image": "",

@@ -14,20 +14,8 @@ const Sidebar = () => {
         placeholder="...search"
         />
         <div className='links'>
-          <NavLink className='link' to='/TaskList'>
-            Task board
-          </NavLink>
-          <NavLink className='link' to='/TaskList'>
-            Task board
-          </NavLink>
-          <NavLink className='link' to='/TaskList'>
-            Task board
-          </NavLink>
-          <NavLink className='link' to='/TaskList'>
-            Task board
-          </NavLink>
-          <NavLink className='link' to='/TaskList'>
-            Task board
+          <NavLink className='link' to='/Universe'>
+            Universe
           </NavLink>
         </div>
       </div>

@@ -1,0 +1,73 @@
+
+
+.shop-container{
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/shopfone.jpg);
+  background-size: cover;
+  position: relative;
+
+  .blackout-fon{
+    width: 100%;
+    height: 100vh;
+    background: rgba(58, 57, 57, 0.36);
+  }
+  ._container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+    .shop-content{
+      width: 100%;
+      height: 100vh;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      //______________HEADER_____________________
+
+      .header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(58, 57, 57, 0.33);
+
+        .nav-bar{
+          width: 94%;
+          display: flex;
+
+          .header-logo{
+            .logo-title{
+              font-family: Orbitron;
+              font-weight: 500;
+              font-size: 35px;
+              color: #f5f1f1;
+              display: flex;
+              align-items: flex-end;
+
+              .logo{
+                display: flex;
+              }
+            }
+          }
+
+          .nav{
+            display: flex;
+            align-items: flex-end;
+            a{
+              font-family: Orbitron;
+              font-weight: 400;
+              font-size: 18px;
+              color: #ffffff;
+              margin: 0 5px 5px 5px;
+            }
+
+          }
+        }
+
+      }
+    }
+
+}
