@@ -1,5 +1,4 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {getPost} from "./asyncRequest/AsyncCreated";
 import {nanoid} from "nanoid";
 
 
