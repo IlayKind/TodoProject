@@ -23,5 +23,172 @@
   ],
   "activeUser": {
     "email": "ilya-finaev@mail.ru"
+  },
+  "metropolisHotel": [
+    {
+      "id": 1,
+      "image":"metropolis-hotel",
+      "name": "Kaifaria Plaza",
+      "description": "All your dreams will come true here. The sun, cozy rooms, the best chefs, all this awaits you at Kaifaria Plaza.",
+      "roomTypes": "Comfort and VIP",
+      "roomNumber": "2-5",
+      "price": 245000
+    },
+    {
+      "id": 2,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 3,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 4,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 5,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 6,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    }
+  ],
+  "winterHotel": [
+    {
+      "id": 1,
+      "image":"metropolis-hotel",
+      "name": "Kaifaria Plaza",
+      "description": "All your dreams will come true here. The sun, cozy rooms, the best chefs, all this awaits you at Kaifaria Plaza.",
+      "roomTypes": "Comfort and VIP",
+      "roomNumber": "2-5",
+      "price": 245000
+    },
+    {
+      "id": 2,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 3,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 4,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 5,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    },
+    {
+      "id": 6,
+      "image": "metropolis-hotel",
+      "name": "fdhb,dv",
+      "description": "fdhb,dv",
+      "roomTypes": "fdhb,dv",
+      "roomNumber": "fdhb,dv",
+      "price": "fdhb,dv"
+    }
+  ],"forestHotel": [
+  {
+    "id": 1,
+    "image":"forest",
+    "name": "Kaifaria Plaza",
+    "description": "All your dreams will come true here. The sun, cozy rooms, the best chefs, all this awaits you at Kaifaria Plaza.",
+    "roomTypes": "Comfort and VIP",
+    "roomNumber": "2-5",
+    "price": 245000
+  },
+  {
+    "id": 2,
+    "image": "forest",
+    "name": "fdhb,dv",
+    "description": "fdhb,dv",
+    "roomTypes": "fdhb,dv",
+    "roomNumber": "fdhb,dv",
+    "price": "fdhb,dv"
+  },
+  {
+    "id": 3,
+    "image": "forest",
+    "name": "fdhb,dv",
+    "description": "fdhb,dv",
+    "roomTypes": "fdhb,dv",
+    "roomNumber": "fdhb,dv",
+    "price": "fdhb,dv"
+  },
+  {
+    "id": 4,
+    "image": "forest",
+    "name": "fdhb,dv",
+    "description": "fdhb,dv",
+    "roomTypes": "fdhb,dv",
+    "roomNumber": "fdhb,dv",
+    "price": "fdhb,dv"
+  },
+  {
+    "id": 5,
+    "image": "forest",
+    "name": "fdhb,dv",
+    "description": "fdhb,dv",
+    "roomTypes": "fdhb,dv",
+    "roomNumber": "fdhb,dv",
+    "price": "fdhb,dv"
+  },
+  {
+    "id": 6,
+    "image": "forest",
+    "name": "fdhb,dv",
+    "description": "fdhb,dv",
+    "roomTypes": "fdhb,dv",
+    "roomNumber": "fdhb,dv",
+    "price": "fdhb,dv"
   }
+]
 }
